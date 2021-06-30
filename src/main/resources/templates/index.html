@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" contentType="application/json; charset=UTF-8">
+
+  <meta name="viewport"  content="width=device-width, initial-scale=1.0">
+
+  <!-- <link rel="stylesheet" href="/grid.css"> -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" th:href="@{fontawesome-free-5.15.3-web/css/all.css}">
+  <link rel="stylesheet" type="text/css"  th:href="@{css/grid.css}">
+  <link rel="stylesheet" type="text/css" th:href="@{css/base.css}">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <link  rel="stylesheet" th:href="@{css/responsive.css}">
+  <style>
+    @media (max-width: 1023px)  {
+      .hide-on-mobile-tablet {
+        display: none ;
+      }
+      .navigation-mobile{
+        display: block ;
+      }
+    }
+
+    @media (min-width: 740px)and (max-width: 1023px) {
+      .hide-on-tablet {
+        display: none ;
+      }
+
+
+      .film-blog{
+        width: 33.33333% ;
+
+      }
+      .input-group {
+        width: 300px ;
+      }
+
+
+    }
+
+    @media (max-width:739px) {
+      .input-group {
+        width: 300px ;
+      }
+      .hide-on-mobile {
+        display: none ;
+      }
+      .film-blog{
+        width: 50% ;
+
+      }
+      .film-image{
+        padding: 0 6px;
+      }
+      .user-button-group-mobile{
+        display: block ;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="main">
+  <div class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo "><img width="100%" th:src="@{img/logo-bilutv-bold.png}"></div>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Nhập tên phim, diễn viên v...v">
+          <button class="btn btn-outline-info">Search</button>
+        </div>
+        <div class="user-button-group hide-on-mobile">
+          <div class="user-button">Thích</div>
+          <div class="user-button">Đăng ký</div>
+          <div class="user-button">Đăng nhập</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navigation">
+    <div class="container">
+      <div class="navi-content hide-on-mobile-tablet">
+        <div class="nav-films"><i class="fas fa-home"></i></div>
+        <div class="nav-films">THỂ LOẠI</div>
+        <div class="nav-films">QUỐC GIA</div>
+        <div class="nav-films">LẺ</div>
+        <div class="nav-films">PHIM BỘ</div>
+        <div class="nav-films">PHIM MỚI</div>
+        <div class="nav-films">PHIM CHIẾU RẠP</div>
+        <div class="nav-films">PHIM HOẠT HÌNH</div>
+        <div class="nav-films">PHIM THUYẾT MINH</div>
+        <div class="nav-films">LỊCH CHIẾU</div>
+      </div>
+    </div>
+  </div>
+  <div class="navigation-mobile">
+    <div class="container">
+      <div class="navi-content">
+        <div class="nav-films">CHIẾU RẠP</div>
+        <div class="nav-films">HOẠT HÌNH</div>
+        <div class="nav-films">THUYẾT MINH</div>
+        <div class="nav-films">LỊCH CHIẾU</div>
+      </div>
+    </div>
+  </div>
+  <div class="user-button-group-mobile">
+    <div class="container">
+      <p style="color: #75ba75;">Đăng nhâp để không có quảng cáo</p>
+      <button class="btn user-button-mobile">Đăng ký</button>
+      <button class="btn user-button-mobile">Đăng nhập</button>
+    </div>
+  </div>
+  <div class="container">
+    <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://i3.wp.com/bilugo.com/upload/images/2021/02/dau-la-dai-luc-2018_1614527851-slider.jpg" class="d-block film-image-carousel w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://i3.wp.com/bilugo.com/upload/images/2021/06/penthouse-cuoc-chien-thuong-luu-phan-1-2020_1622908875-slider.jpg" class="d-block film-image-carousel w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://i3.wp.com/bilugo.com/upload/images/2021/06/penthouse-cuoc-chien-thuong-luu-phan-2-2021_1622908832-slider.jpg" class="d-block film-image-carousel w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <div class="container">
+    <div class="main-content">
+      <div class="new-films-blog">
+        <div class="film-title">
+          <p>PHIM MỚI CẬP NHẬT</p>
+        </div>
+        <div class="list-film">
+          <div class="film-blog">
+
+            <div class="film-chaper"><p>tập</p></div>
+            <img  class="film-image" th:src="@{img/phim-hay-tren-netflix-2.jpg}" >
+            <h3>tên phim</h3>
+            <p>mô tả sương sương</p>
+          </div>
+          <div class="film-blog">
+            <div class="film-chaper"><p>tập</p></div>
+            <img  class="film-image" th:src="@{img/phim-hay-tren-netflix-2.jpg}" >
+            <h3>tên phim</h3>
+            <p>mô tả sương sương</p>
+          </div>
+          <div class="film-blog">
+            <div class="film-chaper"><p>tập</p></div>
+            <img  class="film-image"th:src="@{img/phim-hay-tren-netflix-2.jpg}"  >
+            <h3>tên phim</h3>
+            <p>mô tả sương sương</p>
+          </div>
+          <div class="film-blog">
+            <div class="film-chaper"><p>tập</p></div>
+            <img  class="film-image" th:src="@{img/phim-hay-tren-netflix-2.jpg}" >
+            <h3>tên phim</h3>
+            <p>mô tả sương sương</p>
+          </div>
+          <div class="film-blog">
+            <div class="film-chaper"><p>tập</p></div>
+            <img  class="film-image" th:src="@{img/phim-hay-tren-netflix-2.jpg}" >
+            <h3>tên phim</h3>
+            <p>mô tả sương sương</p>
+          </div>
+          <div class="film-blog">
+            <div class="film-chaper"><p>tập</p></div>
+            <img  class="film-image" th:src="@{img/phim-hay-tren-netflix-2.jpg}" >
+            <h3>tên phim</h3>
+            <p>mô tả sương sương</p>
+          </div>
+        </div>
+        <div class="list-film">
+          <div class="film-blog">
+            <div class="film-chaper"><p>tập</p></div>
+            <img  class="film-image" th:src="@{img/phim-hay-tren-netflix-2.jpg}"  >
+            <h3>tên phim</h3>
+            <p>mô tả sương sương</p>
+          </div>
+          <div class="film-blog">
+            <div class="film-chaper"><p>tập</p></div>
+            <img  class="film-image" th:src="@{img/phim-hay-tren-netflix-2.jpg}" >
+            <h3>tên phim</h3>
+            <p>mô tả sương sương</p>
+          </div>
+          <div class="film-blog">
+            <div class="film-chaper"><p>tập</p></div>
+            <img  class="film-image" th:src="@{img/phim-hay-tren-netflix-2.jpg}" >
+            <h3>tên phim</h3>
+            <p>mô tả sương sương</p>
+          </div>
+          <div class="film-blog">
+            <div class="film-chaper"><p>tập</p></div>
+            <img  class="film-image" th:src="@{img/phim-hay-tren-netflix-2.jpg}" >
+            <h3>tên phim</h3>
+            <p>mô tả sương sương</p>
+          </div>
+          <div class="film-blog">
+            <div class="film-chaper"><p>tập</p></div>
+            <img  class="film-image" th:src="@{img/phim-hay-tren-netflix-2.jpg}"  >
+            <h3>tên phim</h3>
+            <p>mô tả sương sương</p>
+          </div>
+          <div class="film-blog">
+            <div class="film-chaper"><p>tập</p></div>
+            <img  class="film-image" th:src="@{img/phim-hay-tren-netflix-2.jpg}" >
+            <h3>tên phim</h3>
+            <p>mô tả sương sương</p>
+          </div>
+        </div>
+        <div class="list-film">
+          <div class="film-blog">
+            <div class="film-chaper"><p>tập</p></div>
+            <img  class="film-image" th:src="@{img/phim-hay-tren-netflix-2.jpg}" >
+            <h3>tên phim</h3>
+            <p>mô tả sương sương</p>
+          </div>
+          <div class="film-blog">
+            <div class="film-chaper"><p>tập</p></div>
+            <img  class="film-image" th:src="@{img/phim-hay-tren-netflix-2.jpg}" >
+            <h3>tên phim</h3>
+            <p>mô tả sương sương</p>
+          </div>
+          <div class="film-blog">
+            <div class="film-chaper"><p>tập</p></div>
+            <img  class="film-image" th:src="@{img/phim-hay-tren-netflix-2.jpg}" >
+            <h3>tên phim</h3>
+            <p>mô tả sương sương</p>
+          </div>
+          <div class="film-blog">
+            <div class="film-chaper"><p>tập</p></div>
+            <img  class="film-image" th:src="@{img/phim-hay-tren-netflix-2.jpg}" >
+            <h3>tên phim</h3>
+            <p>mô tả sương sương</p>
+          </div>
+          <div class="film-blog">
+            <div class="film-chaper"><p>tập</p></div>
+            <img  class="film-image" th:src="@{img/phim-hay-tren-netflix-2.jpg}" >
+            <h3>tên phim</h3>
+            <p>mô tả sương sương</p>
+          </div>
+          <div class="film-blog">
+            <div class="film-chaper"><p>tập</p></div>
+            <img  class="film-image" th:src="@{img/phim-hay-tren-netflix-2.jpg}" >
+            <h3>tên phim</h3>
+            <p>mô tả sương sương</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+
+
+</html>

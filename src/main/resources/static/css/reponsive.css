@@ -1,0 +1,36 @@
+@media (max-width: 1023px)  {
+    .hide-on-mobile-tablet {
+        display: none !important;
+    }
+    .navigation-mobile{
+        display: block !important; 
+    }
+} 
+
+@media (min-width: 740px)and (max-width: 1023px) {
+    .hide-on-tablet {
+        display: none !important;
+    }
+
+    .input-group {
+        width: 300px !important;
+    }
+    .film-blog{
+        width: 30% !important;
+        margin:0 6px !important;
+    }
+    
+}
+
+@media (max-width:739px) {
+    .hide-on-mobile {
+        display: none !important;
+    }
+    .film-blog{
+        width: 46% !important;
+        margin:0 8px !important;
+    }
+    .user-button-group-mobile{
+        display: block !important;
+    }
+}

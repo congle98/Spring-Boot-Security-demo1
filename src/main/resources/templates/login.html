@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--nếu có th:action thì dc còn chỉ có action thôi ko thì ko dc ko hiểu mấy @@-->
+<form th:action="@{/j_spring_security_check}" method="post">
+  <input type="text" name="username" placeholder="name">
+  <input type="password" name="password" placeholder="mật khẩu">
+  <button type="submit">đăng nhập</button>
+</form>
+</body>
+</html>
